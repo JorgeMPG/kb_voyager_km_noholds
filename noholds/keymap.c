@@ -117,6 +117,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
 
+// https://github.com/qmk/qmk_firmware/issues/22566
+// Restore deprecated OSL quirk: Disable OSL upon OSM tap.
+void post_process_record_user(uint16_t keycode, keyrecord_t *record) {
+    if (IS_QK_ONE_SHOT_MOD(keycode) && is_oneshot_layer_active() && record->event.pressed) {
+        clear_oneshot_layer_state(ONESHOT_OTHER_KEY_PRESSED);
+    }
+    return;
+}
+
+
 
 typedef struct {
     bool is_press_action;
