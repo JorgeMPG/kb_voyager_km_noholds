@@ -56,6 +56,24 @@
               help = "Compile 'noholds' custom layout for voyager";
             }
             {
+              name = "flash";
+              command = "qmk flash";
+              category = "qmk";
+              help = "Flash firmware to keyboard (uses the user defined default kb and km)";
+            }
+            {
+              name = "flash-zsa";
+              command = "qmk flash -kb voyager -km default";
+              category = "qmk";
+              help = "Flash default zsa keymap firmware to voyager";
+            }
+            {
+              name = "flash-noholds";
+              command = "qmk flash -kb voyager -km noholds";
+              category = "qmk";
+              help = "Flash 'noholds' keymap firmware to voyager";
+            }
+            {
               name = "set-qmk-home";
               command = "qmk config user.qmk_home=\"~/lab/qmk_firmware_zsa/\"";
               category = "qmk-config";
