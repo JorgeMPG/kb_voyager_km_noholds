@@ -41,8 +41,11 @@ enum tap_dance_codes {
 enum {
     _BASE,
     _L_OSL,
+    _R_OSL,
     _L_NAV,
+    _R_NAV,
     _L_NUM,
+    _R_NUM,
     _KBCONTROL,
 };
 
@@ -76,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_F11           , KC_F10          , KC_F9           , KC_F8           , KC_F7           , KC_F6           , KC_F5           , KC_F4           , KC_F3           , KC_F2           , KC_F1                , KC_F11          ,
     KC_F12           , _______         , _______         , _______         , _______         , _______         , KC_BSPC         , OSM(MOD_LALT)   , OSM(MOD_LCTL)   , KC_TAB          , QK_CAPS_WORD_TOGGLE  , KC_F12          ,
     _______          , _______         , _______         , _______         , _______         , _______         , KC_ESCAPE       , OSM(MOD_LSFT)   , OSM(MOD_LGUI)   , KC_ENTER        , KC_CIRC              , _______         ,
-    _______          , _______         , _______         , _______         , _______         , _______         , KC_DEL          , KC_BACKSLASH    , TO(_L_NAV)      , TO(_L_NUM)      , _______              , TO(_KBCONTROL)   ,
+    _______          , _______         , _______         , _______         , _______         , _______         , KC_DEL          , KC_BACKSLASH    , TO(_R_NAV)      , TO(_R_NUM)      , _______              , TO(_KBCONTROL)   ,
     // Thumb cluster
     //-------------- ,  ---------SPLIT ,  SPLIT--------- ,  --------------
       XXXXXXX        ,  XXXXXXX        ,  XXXXXXX        ,  XXXXXXX
