@@ -46,6 +46,10 @@ enum {
     // ..., the rest of your layers
 };
 
+// Vim macros:
+//  - Bring the last column (current and 3 lines below) to the current position, shifting all intermediate columns one column to the right.
+//    jjj$F,€ýa;d$p
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_voyager(
     //------------- ,  -------------- ,  -------------- ,  -------------- ,  -------------- ,  ---------SPLIT ,  SPLIT--------- ,  -------------- ,  -------------- ,  -------------- ,  -------------- ,  --------------,
@@ -58,21 +62,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       OSL(_L_OSL)    ,  KC_SPACE       ,  KC_SPACE       ,  OSL(_L_OSL)
   ),
   [_L_OSL] = LAYOUT_voyager(
-    //------------- ,  -------------- ,  -------------- ,  -------------- ,  -------------- ,  ---------SPLIT ,  SPLIT--------- ,  -------------- ,  -------------- ,  -------------- ,  -------------- ,  --------------,
-    KC_F11          ,  KC_F1          ,  KC_F2          ,  KC_F3          ,  KC_F4          ,  KC_F5          ,  KC_F6          ,  KC_F7          ,  KC_F8          ,  KC_F9          ,  KC_F10         ,  KC_F11 ,
-    KC_F12          ,  KC_EXLM        ,  KC_TAB         ,  OSM(MOD_LCTL)  ,  OSM(MOD_LALT)  ,  KC_BSPC        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  KC_F12 ,
-    _______         ,  KC_CIRC        ,  KC_ENTER       ,  OSM(MOD_LGUI)  ,  OSM(MOD_LSFT)  ,  KC_ESCAPE      ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______ ,
-    _______         ,  _______        ,  TO(_L_NUM)     ,  TO(_L_NAV)     ,  KC_BACKSLASH   ,  KC_DEL         ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______ ,
+    //------------- ,  --------------      ,  -------------- ,  -------------- ,  -------------- ,  ---------SPLIT ,  SPLIT--------- ,  -------------- ,  -------------- ,  -------------- ,  -------------- ,  --------------,
+    KC_F11          ,  KC_F1               ,  KC_F2          ,  KC_F3          ,  KC_F4          ,  KC_F5          ,  KC_F6          ,  KC_F7          ,  KC_F8          ,  KC_F9          ,  KC_F10         ,  KC_F11 ,
+    KC_F12          ,  QK_CAPS_WORD_TOGGLE ,  KC_TAB         ,  OSM(MOD_LCTL)  ,  OSM(MOD_LALT)  ,  KC_BSPC        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  KC_F12 ,
+    _______         ,  KC_CIRC             ,  KC_ENTER       ,  OSM(MOD_LGUI)  ,  OSM(MOD_LSFT)  ,  KC_ESCAPE      ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______ ,
+    _______         ,  _______             ,  TO(_L_NUM)     ,  TO(_L_NAV)     ,  KC_BACKSLASH   ,  KC_DEL         ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______ ,
     // Thumb cluster
     //-------------- ,  ---------SPLIT ,  SPLIT--------- ,  --------------
       XXXXXXX        ,  XXXXXXX        ,  XXXXXXX        ,  XXXXXXX
   ),
   [_L_NAV] = LAYOUT_voyager(
-    //------------- ,  --------------                                        ,  --------------                                  ,  -------------- ,  -------------- ,  ---------SPLIT  ,  SPLIT--------- ,  --------------                  ,  -------------- ,  -------------- ,  -------------- ,  --------------,
-    RGB_TOG         ,  TOGGLE_LAYER_COLOR,RGB_MOD                            ,  RGB_SLD                                         ,  RGB_VAD        ,  RGB_VAI        ,  KC_TRANSPARENT  ,  KC_TRANSPARENT ,  KC_TRANSPARENT                  ,  KC_TRANSPARENT ,  KC_TRANSPARENT ,  KC_TRANSPARENT,
-    KC_TRANSPARENT  ,  KC_TRANSPARENT                                        ,  KC_AUDIO_VOL_DOWN,KC_AUDIO_VOL_UP,KC_AUDIO_MUTE ,  KC_TRANSPARENT ,  KC_PGUP        ,  KC_HOME         ,  KC_UP          ,  KC_END                          ,  KC_TRANSPARENT ,  KC_TRANSPARENT,
-    KC_TRANSPARENT  ,  KC_MEDIA_PREV_TRACK,KC_MEDIA_NEXT_TRACK,KC_MEDIA_STOP ,  KC_MEDIA_PLAY_PAUSE,KC_TRANSPARENT              ,  KC_PGDN        ,  KC_LEFT        ,  KC_DOWN         ,  KC_RIGHT       ,  KC_TRANSPARENT                  ,  KC_TRANSPARENT,
-    KC_TRANSPARENT  ,  KC_TRANSPARENT                                        ,  KC_TRANSPARENT                                  ,  HSV_0_255_255  ,  HSV_74_255_255 ,  HSV_169_255_255 ,  KC_TRANSPARENT ,  LCTL(LSFT(KC_TAB)),LCTL(KC_TAB) ,  KC_TRANSPARENT ,  KC_TRANSPARENT ,  KC_TRANSPARENT,
+    //------------- ,  -------------- ,  -------------- ,  -------------- ,  -------------- ,  ---------SPLIT ,  SPLIT--------- ,  -------------- ,  -------------- ,  -------------- ,  --------------      ,  --------------,
+    _______         ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______             ,  _______          ,
+    _______         ,  KC_PAGE_UP     ,  KC_W           ,  KC_UP          ,  KC_R           ,  _______        ,  KC_BSPC        ,  OSM(MOD_LALT)  ,  OSM(MOD_LCTL)  ,  KC_TAB         ,  QK_CAPS_WORD_TOGGLE ,  _______          ,
+    _______         ,  KC_PAGE_DOWN   ,  KC_LEFT        ,  KC_DOWN        ,  KC_RIGHT       ,  _______        ,  KC_ESCAPE      ,  OSM(MOD_LSFT)  ,  OSM(MOD_LGUI)  ,  KC_ENTER       ,  KC_CIRC             ,  _______         ,
+    _______         ,  _______        ,  KC_BACKSPACE   ,  XXXXXXX        ,  KC_DEL         ,  _______        ,  KC_DEL         ,  KC_BACKSLASH   ,  _______        ,  _______        ,  _______             ,  _______         ,
     // Thumb cluster
     //-------------- ,  ---------SPLIT ,  SPLIT--------- ,  --------------
       XXXXXXX        ,  TO(_BASE)      ,  TO(_BASE)      ,  XXXXXXX
