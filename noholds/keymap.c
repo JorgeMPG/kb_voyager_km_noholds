@@ -43,7 +43,7 @@ enum {
     _L_OSL,
     _L_NAV,
     _L_NUM,
-    _KBCONFIG,
+    _KBCONTROL,
 };
 
 // Vim macros:
@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_F11          ,  KC_F1               ,  KC_F2          ,  KC_F3          ,  KC_F4          ,  KC_F5          ,  KC_F6          ,  KC_F7          ,  KC_F8          ,  KC_F9          ,  KC_F10         ,  KC_F11 ,
     KC_F12          ,  QK_CAPS_WORD_TOGGLE ,  KC_TAB         ,  OSM(MOD_LCTL)  ,  OSM(MOD_LALT)  ,  KC_BSPC        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  KC_F12 ,
     _______         ,  KC_CIRC             ,  KC_ENTER       ,  OSM(MOD_LGUI)  ,  OSM(MOD_LSFT)  ,  KC_ESCAPE      ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______ ,
-    TO(_KBCONFIG)   ,  _______             ,  TO(_L_NUM)     ,  TO(_L_NAV)     ,  KC_BACKSLASH   ,  KC_DEL         ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______ ,
+    TO(_KBCONTROL)   ,  _______             ,  TO(_L_NUM)     ,  TO(_L_NAV)     ,  KC_BACKSLASH   ,  KC_DEL         ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______ ,
     // Thumb cluster
     //-------------- ,  ---------SPLIT ,  SPLIT--------- ,  --------------
       XXXXXXX        ,  XXXXXXX        ,  XXXXXXX        ,  XXXXXXX
@@ -76,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_F11           , KC_F10          , KC_F9           , KC_F8           , KC_F7           , KC_F6           , KC_F5           , KC_F4           , KC_F3           , KC_F2           , KC_F1                , KC_F11          ,
     KC_F12           , _______         , _______         , _______         , _______         , _______         , KC_BSPC         , OSM(MOD_LALT)   , OSM(MOD_LCTL)   , KC_TAB          , QK_CAPS_WORD_TOGGLE  , KC_F12          ,
     _______          , _______         , _______         , _______         , _______         , _______         , KC_ESCAPE       , OSM(MOD_LSFT)   , OSM(MOD_LGUI)   , KC_ENTER        , KC_CIRC              , _______         ,
-    _______          , _______         , _______         , _______         , _______         , _______         , KC_DEL          , KC_BACKSLASH    , TO(_L_NAV)      , TO(_L_NUM)      , _______              , TO(_KBCONFIG)   ,
+    _______          , _______         , _______         , _______         , _______         , _______         , KC_DEL          , KC_BACKSLASH    , TO(_L_NAV)      , TO(_L_NUM)      , _______              , TO(_KBCONTROL)   ,
     // Thumb cluster
     //-------------- ,  ---------SPLIT ,  SPLIT--------- ,  --------------
       XXXXXXX        ,  XXXXXXX        ,  XXXXXXX        ,  XXXXXXX
@@ -121,12 +121,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //-------------- ,  ---------SPLIT ,  SPLIT--------- ,  --------------
       XXXXXXX        ,  TO(_BASE)      ,  TO(_BASE)      ,  XXXXXXX
   ),
-  [_KBCONFIG] = LAYOUT_voyager(
-    //-------------  , --------------       , --------------       , --------------   , --------------       , ---------SPLIT   , SPLIT---------  , --------------  , --------------  , --------------  , --------------       , --------------  ,
-    RGB_TOG          , TOGGLE_LAYER_COLOR   , RGB_MOD              , RGB_SLD          , RGB_VAD              , RGB_VAI          , _______         , _______         , _______         , _______         , _______              , _______         ,
-    _______          , _______              , KC_AUDIO_VOL_DOWN    , KC_AUDIO_VOL_UP  , KC_AUDIO_MUTE        , _______          , KC_BSPC         , OSM(MOD_LALT)   , OSM(MOD_LCTL)   , KC_TAB          , QK_CAPS_WORD_TOGGLE  , _______         ,
-    _______          , KC_MEDIA_PREV_TRACK  , KC_MEDIA_NEXT_TRACK  , KC_MEDIA_STOP    , KC_MEDIA_PLAY_PAUSE  , _______          , KC_ESCAPE       , OSM(MOD_LSFT)   , OSM(MOD_LGUI)   , KC_ENTER        , KC_CIRC              , _______         ,
-    _______          , _______              , _______              , HSV_0_255_255    , HSV_74_255_255       , HSV_169_255_255  , KC_DEL          , KC_BACKSLASH    , _______         , _______         , _______              , _______         ,
+  [_KBCONTROL] = LAYOUT_voyager(
+    //-------------  , --------------      , --------------  , --------------      , --------------    , ---------SPLIT  , SPLIT---------  , --------------  , --------------  , --------------  , --------------       , --------------  ,
+    RGB_TOG          , TOGGLE_LAYER_COLOR  , RGB_MOD         , RGB_SLD             , RGB_VAD           , RGB_VAI         , _______         , _______         , _______         , _______         , _______              , _______         ,
+    XXXXXXX          , XXXXXXX             , HSV_0_255_255   , HSV_74_255_255      , HSV_169_255_255   , XXXXXXX         , KC_BSPC         , OSM(MOD_LALT)   , OSM(MOD_LCTL)   , KC_TAB          , QK_CAPS_WORD_TOGGLE  , _______         ,
+    XXXXXXX          , XXXXXXX             , KC_AUDIO_MUTE   , KC_AUDIO_VOL_DOWN   , KC_AUDIO_VOL_UP   , XXXXXXX         , KC_ESCAPE       , OSM(MOD_LSFT)   , OSM(MOD_LGUI)   , KC_ENTER        , KC_CIRC              , _______         ,
+    XXXXXXX          , XXXXXXX             , XXXXXXX         , KC_BRIGHTNESS_DOWN  , KC_BRIGHTNESS_UP  , XXXXXXX         , KC_DEL          , KC_BACKSLASH    , _______         , _______         , _______              , _______         ,
     // Thumb cluster
     //-------------- ,  ---------SPLIT ,  SPLIT--------- ,  --------------
       XXXXXXX        ,  TO(_BASE)      ,  TO(_BASE)      ,  XXXXXXX
