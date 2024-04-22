@@ -70,8 +70,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //------------- ,  --------------      ,  -------------- ,  -------------- ,  -------------- ,  ---------SPLIT ,  SPLIT--------- ,  -------------- ,  -------------- ,  -------------- ,  -------------- ,  -------------- ,
     KC_F11          ,  KC_F1               ,  KC_F2          ,  KC_F3          ,  KC_F4          ,  KC_F5          ,  KC_F6          ,  KC_F7          ,  KC_F8          ,  KC_F9          ,  KC_F10         ,  KC_F11 ,
     KC_F12          ,  QK_CAPS_WORD_TOGGLE ,  KC_TAB         ,  OSM(MOD_LCTL)  ,  OSM(MOD_LALT)  ,  KC_BSPC        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  KC_F12 ,
-    _______         ,  KC_CIRC             ,  KC_ENTER       ,  OSM(MOD_LGUI)  ,  OSM(MOD_LSFT)  ,  KC_ESCAPE      ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______ ,
-    TO(_KBCONTROL)   ,  OSL(_OSL_SYM)       ,  TO(_L_NUM)     ,  TO(_L_NAV)     ,  KC_BACKSLASH   ,  KC_DEL         ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______ ,
+    _______         ,  KC_GRAVE            ,  KC_ENTER       ,  OSM(MOD_LGUI)  ,  OSM(MOD_LSFT)  ,  KC_ESCAPE      ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______ ,
+    TO(_KBCONTROL)  ,  OSL(_OSL_SYM)       ,  TO(_L_NUM)     ,  TO(_L_NAV)     ,  KC_BACKSLASH   ,  KC_DEL         ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______ ,
     // Thumb cluster
     //--------------  , ---------SPLIT  , SPLIT---------  , --------------
       KC_SPACE        , XXXXXXX         , XXXXXXX         , KC_SPACE
@@ -80,8 +80,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //-------------  , --------------  , --------------  , --------------  , --------------  , ---------SPLIT  , SPLIT---------  , --------------  , --------------  , --------------  , --------------       , --------------  ,
     KC_F11           , KC_F10          , KC_F9           , KC_F8           , KC_F7           , KC_F6           , KC_F5           , KC_F4           , KC_F3           , KC_F2           , KC_F1                , KC_F11          ,
     KC_F12           , _______         , _______         , _______         , _______         , _______         , KC_BSPC         , OSM(MOD_LALT)   , OSM(MOD_LCTL)   , KC_TAB          , QK_CAPS_WORD_TOGGLE  , KC_F12          ,
-    _______          , _______         , _______         , _______         , _______         , _______         , KC_ESCAPE       , OSM(MOD_LSFT)   , OSM(MOD_LGUI)   , KC_ENTER        , KC_CIRC              , _______         ,
-    _______          , _______         , _______         , _______         , _______         , _______         , KC_DEL          , KC_BACKSLASH    , TO(_R_NAV)      , TO(_R_NUM)      , OSL(_OSL_SYM)         , TO(_KBCONTROL)   ,
+    _______          , _______         , _______         , _______         , _______         , _______         , KC_ESCAPE       , OSM(MOD_LSFT)   , OSM(MOD_LGUI)   , KC_ENTER        , KC_GRAVE             , _______         ,
+    _______          , _______         , _______         , _______         , _______         , _______         , KC_DEL          , KC_BACKSLASH    , TO(_R_NAV)      , TO(_R_NUM)      , OSL(_OSL_SYM)        , TO(_KBCONTROL)  ,
     // Thumb cluster
     //--------------  , ---------SPLIT  , SPLIT---------  , --------------
       KC_SPACE        , XXXXXXX         , XXXXXXX         , KC_SPACE
