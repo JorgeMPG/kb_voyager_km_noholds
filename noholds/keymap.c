@@ -63,8 +63,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     OSM(MOD_LCTL)    , KC_Z            , KC_X            , KC_C            , KC_V            , KC_B            , KC_N            , KC_M            , KC_COMMA        , KC_DOT          , KC_SLASH        , KC_ENTER        ,
     // Thumb cluster
     //--------------  , ---------SPLIT  , SPLIT---------  , --------------
-     OSL(_L_OSL)      , KC_SPACE        , KC_SPACE        , OSL(_R_OSL)
-    //  KC_SPACE      , OSL(_L_OSL)     , OSL(_R_OSL)     , KC_SPACE
+    // OSL(_L_OSL)    , KC_SPACE        , KC_SPACE        , OSL(_R_OSL)
+      KC_SPACE        , OSL(_L_OSL)     , OSL(_R_OSL)     , KC_SPACE
   ),
   [_L_OSL] = LAYOUT_voyager(
     //------------- ,  --------------      ,  -------------- ,  -------------- ,  -------------- ,  ---------SPLIT ,  SPLIT--------- ,  -------------- ,  -------------- ,  -------------- ,  -------------- ,  -------------- ,
@@ -73,8 +73,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______         ,  KC_GRAVE            ,  KC_ENTER       ,  OSM(MOD_LGUI)  ,  OSM(MOD_LSFT)  ,  KC_ESCAPE      ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______ ,
     TO(_KBCONTROL)  ,  OSL(_OSL_SYM)       ,  TO(_L_NUM)     ,  TO(_L_NAV)     ,  KC_BACKSLASH   ,  KC_DEL         ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______ ,
     // Thumb cluster
-    //--------------  , ---------SPLIT  , SPLIT---------  , --------------
-      KC_SPACE        , XXXXXXX         , XXXXXXX         , KC_SPACE
+    //-------------- ,  ---------SPLIT ,  SPLIT--------- ,  --------------
+      XXXXXXX        ,  XXXXXXX        ,  XXXXXXX        ,  XXXXXXX
   ),
   [_R_OSL] = LAYOUT_voyager(
     //-------------  , --------------  , --------------  , --------------  , --------------  , ---------SPLIT  , SPLIT---------  , --------------  , --------------  , --------------  , --------------       , --------------  ,
@@ -83,8 +83,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______          , _______         , _______         , _______         , _______         , _______         , KC_ESCAPE       , OSM(MOD_LSFT)   , OSM(MOD_LGUI)   , KC_ENTER        , KC_GRAVE             , _______         ,
     _______          , _______         , _______         , _______         , _______         , _______         , KC_DEL          , KC_BACKSLASH    , TO(_R_NAV)      , TO(_R_NUM)      , OSL(_OSL_SYM)        , TO(_KBCONTROL)  ,
     // Thumb cluster
-    //--------------  , ---------SPLIT  , SPLIT---------  , --------------
-      KC_SPACE        , XXXXXXX         , XXXXXXX         , KC_SPACE
+    //-------------- ,  ---------SPLIT ,  SPLIT--------- ,  --------------
+      XXXXXXX        ,  XXXXXXX        ,  XXXXXXX        ,  XXXXXXX
   ),
   [_L_NAV] = LAYOUT_voyager(
     //-------------  , --------------  , --------------  , --------------  , --------------  , ---------SPLIT  , SPLIT---------  , --------------  , --------------  , --------------  , --------------       , --------------  ,
