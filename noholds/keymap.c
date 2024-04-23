@@ -93,8 +93,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______          , KC_PAGE_DOWN    , KC_LEFT         , KC_DOWN         , KC_RIGHT        , _______         , KC_ESCAPE       , OSM(MOD_LSFT)   , OSM(MOD_LGUI)   , KC_ENTER        , KC_CIRC              , _______         ,
     _______          , _______         , KC_BACKSPACE    , _______         , KC_DEL          , _______         , KC_DEL          , KC_BACKSLASH    , _______         , _______         , _______              , _______         ,
     // Thumb cluster
-    //-------------- ,  ---------SPLIT ,  SPLIT--------- ,  --------------
-      XXXXXXX        ,  TO(_BASE)      ,  TO(_BASE)      ,  XXXXXXX
+    //--------------  ,  ---------SPLIT  ,  SPLIT---------  ,  --------------
+      TO(_BASE)       ,  TO(_BASE)       ,  TO(_BASE)       ,  TO(_BASE)
   ),
   [_R_NAV] = LAYOUT_voyager(
     //-------------  , --------------       , --------------  , --------------  , --------------  , ---------SPLIT  , SPLIT---------  , --------------  , --------------  , --------------  , --------------  , --------------  ,
@@ -103,8 +103,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______          , KC_CIRC              , KC_ENTER        , OSM(MOD_LGUI)   , OSM(MOD_LSFT)   , KC_ESCAPE       , _______         , KC_LEFT         , KC_DOWN         , KC_RIGHT        , KC_PAGE_DOWN    , _______         ,
     _______          , _______              , _______         , _______         , KC_BACKSLASH    , KC_DEL          , _______         , KC_BACKSPACE    , _______         , KC_DEL          , _______         , _______         ,
     // Thumb cluster
-    //-------------- ,  ---------SPLIT ,  SPLIT--------- ,  --------------
-      XXXXXXX        ,  TO(_BASE)      ,  TO(_BASE)      ,  XXXXXXX
+    //--------------  ,  ---------SPLIT  ,  SPLIT---------  ,  --------------
+      TO(_BASE)       ,  TO(_BASE)       ,  TO(_BASE)       ,  TO(_BASE)
   ),
   [_L_NUM] = LAYOUT_voyager(
     //-------------  , --------------  , --------------       , --------------        , --------------  , ---------SPLIT  , SPLIT---------  , --------------  , --------------  , --------------  , --------------       , --------------  ,
@@ -113,8 +113,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______          , KC_BACKSLASH    , KC_LEFT_BRACKET      , KC_RIGHT_BRACKET      , KC_MINUS        , KC_SLASH        , KC_ESCAPE       , OSM(MOD_LSFT)   , OSM(MOD_LGUI)   , KC_ENTER        , KC_CIRC              , _______         ,
     _______          , KC_SEMICOLON    , KC_LEFT_CURLY_BRACE  , KC_RIGHT_CURLY_BRACE  , KC_EQUAL        , KC_DOT          , KC_DEL          , KC_BACKSLASH    , _______         , _______         , _______              , _______         ,
     // Thumb cluster
-    //-------------- ,  ---------SPLIT ,  SPLIT--------- ,  --------------
-      XXXXXXX        ,  TO(_BASE)      ,  TO(_BASE)      ,  XXXXXXX
+    //--------------  ,  ---------SPLIT  ,  SPLIT---------  ,  --------------
+      TO(_BASE)       ,  TO(_BASE)       ,  TO(_BASE)       ,  TO(_BASE)
   ),
   [_R_NUM] = LAYOUT_voyager(
     //-------------  , --------------       , --------------  , --------------  , --------------  , ---------SPLIT  , SPLIT---------  , --------------  , --------------       , --------------        , --------------  , --------------  ,
@@ -123,8 +123,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______          , KC_CIRC              , KC_ENTER        , OSM(MOD_LGUI)   , OSM(MOD_LSFT)   , KC_ESCAPE       , KC_SLASH        , KC_MINUS        , KC_LEFT_BRACKET      , KC_RIGHT_BRACKET      , KC_BACKSLASH    , _______         ,
     _______          , _______              , _______         , _______         , KC_BACKSLASH    , KC_DEL          , KC_DOT          , KC_EQUAL        , KC_LEFT_CURLY_BRACE  , KC_RIGHT_CURLY_BRACE  , KC_SEMICOLON    , _______         ,
     // Thumb cluster
-    //-------------- ,  ---------SPLIT ,  SPLIT--------- ,  --------------
-      XXXXXXX        ,  TO(_BASE)      ,  TO(_BASE)      ,  XXXXXXX
+    //--------------  ,  ---------SPLIT  ,  SPLIT---------  ,  --------------
+      TO(_BASE)       ,  TO(_BASE)       ,  TO(_BASE)       ,  TO(_BASE)
   ),
   [_OSL_SYM] = LAYOUT_voyager(
     //-------------  , --------------  , --------------       , --------------        , --------------  , ---------SPLIT  , SPLIT---------  , --------------  , --------------        , --------------       , --------------  , --------------  ,
@@ -133,8 +133,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______          , KC_BACKSLASH    , KC_LEFT_BRACKET      , KC_RIGHT_BRACKET      , KC_MINUS        , KC_SLASH        , KC_SLASH        , KC_MINUS        , KC_RIGHT_BRACKET      , KC_LEFT_BRACKET      , KC_BACKSLASH    , _______         ,
     _______          , KC_SEMICOLON    , KC_LEFT_CURLY_BRACE  , KC_RIGHT_CURLY_BRACE  , KC_EQUAL        , KC_DOT          , KC_DOT          , KC_EQUAL        , KC_RIGHT_CURLY_BRACE  , KC_LEFT_CURLY_BRACE  , KC_SEMICOLON    , _______         ,
     // Thumb cluster
-    //-------------- ,  ---------SPLIT ,  SPLIT--------- ,  --------------
-      XXXXXXX        ,  TO(_BASE)      ,  TO(_BASE)      ,  XXXXXXX
+    //--------------  ,  ---------SPLIT  ,  SPLIT---------  ,  --------------
+      TO(_BASE)       ,  TO(_BASE)       ,  TO(_BASE)       ,  TO(_BASE)
   ),
   [_KBCONTROL] = LAYOUT_voyager(
     //-------------  , --------------      , --------------  , --------------      , --------------    , ---------SPLIT  , SPLIT---------  , --------------  , --------------  , --------------  , --------------       , --------------  ,
@@ -143,8 +143,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX          , XXXXXXX             , KC_AUDIO_MUTE   , KC_AUDIO_VOL_DOWN   , KC_AUDIO_VOL_UP   , XXXXXXX         , KC_ESCAPE       , OSM(MOD_LSFT)   , OSM(MOD_LGUI)   , KC_ENTER        , KC_CIRC              , _______         ,
     XXXXXXX          , XXXXXXX             , XXXXXXX         , KC_BRIGHTNESS_DOWN  , KC_BRIGHTNESS_UP  , XXXXXXX         , KC_DEL          , KC_BACKSLASH    , _______         , _______         , _______              , _______         ,
     // Thumb cluster
-    //-------------- ,  ---------SPLIT ,  SPLIT--------- ,  --------------
-      XXXXXXX        ,  TO(_BASE)      ,  TO(_BASE)      ,  XXXXXXX
+    //--------------  ,  ---------SPLIT  ,  SPLIT---------  ,  --------------
+      TO(_BASE)       ,  TO(_BASE)       ,  TO(_BASE)       ,  TO(_BASE)
   ),
 };
 
