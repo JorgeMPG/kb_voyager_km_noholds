@@ -107,21 +107,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       TO(_BASE)       ,  TO(_BASE)       ,  TO(_BASE)       ,  TO(_BASE)
   ),
   [_L_NUM] = LAYOUT_voyager(
-    //-------------  , --------------  , --------------       , --------------        , --------------  , ---------SPLIT  , SPLIT---------  , --------------  , --------------  , --------------  , --------------       , --------------  ,
-    _______          , KC_1            , KC_2                 , KC_3                  , KC_4            , KC_5            , _______         , _______         , _______         , _______         , _______              , _______         ,
-    _______          , KC_6            , KC_7                 , KC_8                  , KC_9            , KC_0            , KC_BSPC         , OSM(MOD_LALT)   , OSM(MOD_LCTL)   , KC_TAB          , QK_CAPS_WORD_TOGGLE  , _______         ,
-    _______          , KC_BACKSLASH    , KC_LEFT_BRACKET      , KC_RIGHT_BRACKET      , KC_MINUS        , KC_SLASH        , KC_ESCAPE       , OSM(MOD_LSFT)   , OSM(MOD_LGUI)   , KC_ENTER        , KC_CIRC              , _______         ,
-    _______          , KC_SEMICOLON    , KC_LEFT_CURLY_BRACE  , KC_RIGHT_CURLY_BRACE  , KC_EQUAL        , KC_DOT          , KC_DEL          , KC_BACKSLASH    , _______         , _______         , _______              , _______         ,
+    //-------------  ,  --------------  ,  --------------  ,  --------------  ,  --------------  ,  ---------SPLIT  ,  SPLIT---------  ,  --------------  ,  --------------  ,  --------------  ,  --------------       ,  --------------  ,
+    _______          ,  _______         ,  _______         ,  _______         ,  _______         ,  _______         ,  _______         ,  _______         ,  _______         ,  _______         ,  _______              ,  _______         ,
+    _______          ,  KC_1            ,  KC_2            ,  KC_3            ,  KC_4            ,  KC_5            ,  KC_BSPC         ,  OSM(MOD_LALT)   ,  OSM(MOD_LCTL)   ,  KC_TAB          ,  QK_CAPS_WORD_TOGGLE  ,  _______         ,
+    _______          ,  KC_6            ,  KC_7            ,  KC_8            ,  KC_9            ,  KC_0            ,  KC_ESCAPE       ,  OSM(MOD_LSFT)   ,  OSM(MOD_LGUI)   ,  KC_ENTER        ,  KC_CIRC              ,  _______         ,
+    _______          ,  KC_SLASH        ,  KC_MINUS        ,  KC_EQUAL        ,  KC_BACKSLASH    ,  _______         ,  KC_DEL          ,  KC_BACKSLASH    ,  _______         ,  _______         ,  _______              ,  _______         ,
     // Thumb cluster
     //--------------  ,  ---------SPLIT  ,  SPLIT---------  ,  --------------
       TO(_BASE)       ,  TO(_BASE)       ,  TO(_BASE)       ,  TO(_BASE)
   ),
   [_R_NUM] = LAYOUT_voyager(
-    //-------------  , --------------       , --------------  , --------------  , --------------  , ---------SPLIT  , SPLIT---------  , --------------  , --------------       , --------------        , --------------  , --------------  ,
-    _______          , _______              , _______         , _______         , _______         , _______         , KC_1            , KC_2            , KC_3                 , KC_4                  , KC_5            , _______         ,
-    _______          , QK_CAPS_WORD_TOGGLE  , KC_TAB          , OSM(MOD_LCTL)   , OSM(MOD_LALT)   , KC_BSPC         , KC_6            , KC_7            , KC_8                 , KC_9                  , KC_0            , _______         ,
-    _______          , KC_CIRC              , KC_ENTER        , OSM(MOD_LGUI)   , OSM(MOD_LSFT)   , KC_ESCAPE       , KC_SLASH        , KC_MINUS        , KC_LEFT_BRACKET      , KC_RIGHT_BRACKET      , KC_BACKSLASH    , _______         ,
-    _______          , _______              , _______         , _______         , KC_BACKSLASH    , KC_DEL          , KC_DOT          , KC_EQUAL        , KC_LEFT_CURLY_BRACE  , KC_RIGHT_CURLY_BRACE  , KC_SEMICOLON    , _______         ,
+    //-------------  ,  --------------       ,  --------------  ,  --------------  ,  --------------  ,  ---------SPLIT  ,  SPLIT---------  ,  --------------  ,  --------------  ,  --------------  ,  --------------  ,  --------------  ,
+    _______          ,  _______              ,  _______         ,  _______         ,  _______         ,  _______         ,  _______         ,  _______         ,  _______         ,  _______         ,  _______         ,  _______          ,
+    _______          ,  QK_CAPS_WORD_TOGGLE  ,  KC_TAB          ,  OSM(MOD_LCTL)   ,  OSM(MOD_LALT)   ,  KC_BSPC         ,  KC_5            ,  KC_4            ,  KC_3            ,  KC_2            ,  KC_1            ,  _______          ,
+    _______          ,  KC_CIRC              ,  KC_ENTER        ,  OSM(MOD_LGUI)   ,  OSM(MOD_LSFT)   ,  KC_ESCAPE       ,  KC_0            ,  KC_9            ,  KC_8            ,  KC_7            ,  KC_6            ,  _______          ,
+    _______          ,  _______              ,  _______         ,  _______         ,  KC_BACKSLASH    ,  KC_DEL          ,  _______         ,  KC_BACKSLASH    ,  KC_EQUAL        ,  KC_MINUS        ,  KC_SLASH        ,  _______          ,
     // Thumb cluster
     //--------------  ,  ---------SPLIT  ,  SPLIT---------  ,  --------------
       TO(_BASE)       ,  TO(_BASE)       ,  TO(_BASE)       ,  TO(_BASE)
