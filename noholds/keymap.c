@@ -52,7 +52,7 @@ enum {
 
 // Vim macros:
 //  - Bring the last column (current and 3 lines below) to the current position, shifting all intermediate columns one column to the right.
-//    jjj$F,€ýa;d$p
+//    hjjj$F,;d$p
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_voyager(
@@ -67,11 +67,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_SPACE        , OSL(_L_OSL)     , OSL(_R_OSL)     , KC_SPACE
   ),
   [_L_OSL] = LAYOUT_voyager(
-    //------------- ,  --------------      ,  -------------- ,  -------------- ,  -------------- ,  ---------SPLIT ,  SPLIT--------- ,  -------------- ,  -------------- ,  -------------- ,  -------------- ,  -------------- ,
-    KC_F11          ,  KC_F1               ,  KC_F2          ,  KC_F3          ,  KC_F4          ,  KC_F5          ,  KC_F6          ,  KC_F7          ,  KC_F8          ,  KC_F9          ,  KC_F10         ,  KC_F11 ,
-    KC_F12          ,  QK_CAPS_WORD_TOGGLE ,  KC_TAB         ,  OSM(MOD_LCTL)  ,  OSM(MOD_LALT)  ,  KC_BSPC        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  KC_F12 ,
-    _______         ,  KC_GRAVE            ,  KC_ENTER       ,  OSM(MOD_LGUI)  ,  OSM(MOD_LSFT)  ,  KC_ESCAPE      ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______ ,
-    TO(_KBCONTROL)  ,  OSL(_OSL_SYM)       ,  TO(_L_NUM)     ,  TO(_L_NAV)     ,  KC_BACKSLASH   ,  KC_DEL         ,  _______        ,  _______        ,  _______        ,  _______        ,  _______        ,  _______ ,
+    //-------------  , --------------       , --------------  , --------------  , --------------  , ---------SPLIT  , SPLIT---------  , --------------  , --------------  , --------------  , --------------  , --------------  ,
+    KC_F11           , KC_F1                , KC_F2           , KC_F3           , KC_F4           , KC_F5           , KC_F6           , KC_F7           , KC_F8           , KC_F9           , KC_F10          , KC_F11          ,
+    KC_F12           , QK_CAPS_WORD_TOGGLE  , KC_TAB          , OSM(MOD_LCTL)   , OSM(MOD_LALT)   , KC_BSPC         , _______         , _______         , _______         , _______         , _______         , KC_F12          ,
+    _______          , KC_GRAVE             , KC_ENTER        , OSM(MOD_LGUI)   , OSM(MOD_LSFT)   , KC_ESCAPE       , _______         , _______         , _______         , _______         , _______         , _______         ,
+    TO(_KBCONTROL)   , TO(_L_NUM)           , OSL(_OSL_SYM)   , TO(_L_NAV)      , KC_BACKSLASH    , KC_DEL          , _______         , _______         , _______         , _______         , _______         , _______         ,
     // Thumb cluster
     //-------------- ,  ---------SPLIT ,  SPLIT--------- ,  --------------
       XXXXXXX        ,  XXXXXXX        ,  XXXXXXX        ,  XXXXXXX
@@ -81,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_F11           , KC_F10          , KC_F9           , KC_F8           , KC_F7           , KC_F6           , KC_F5           , KC_F4           , KC_F3           , KC_F2           , KC_F1                , KC_F11          ,
     KC_F12           , _______         , _______         , _______         , _______         , _______         , KC_BSPC         , OSM(MOD_LALT)   , OSM(MOD_LCTL)   , KC_TAB          , QK_CAPS_WORD_TOGGLE  , KC_F12          ,
     _______          , _______         , _______         , _______         , _______         , _______         , KC_ESCAPE       , OSM(MOD_LSFT)   , OSM(MOD_LGUI)   , KC_ENTER        , KC_GRAVE             , _______         ,
-    _______          , _______         , _______         , _______         , _______         , _______         , KC_DEL          , KC_BACKSLASH    , TO(_R_NAV)      , TO(_R_NUM)      , OSL(_OSL_SYM)        , TO(_KBCONTROL)  ,
+    _______          , _______         , _______         , _______         , _______         , _______         , KC_DEL          , KC_BACKSLASH    , TO(_R_NAV)      , OSL(_OSL_SYM)   , TO(_R_NUM)           , TO(_KBCONTROL)  ,
     // Thumb cluster
     //-------------- ,  ---------SPLIT ,  SPLIT--------- ,  --------------
       XXXXXXX        ,  XXXXXXX        ,  XXXXXXX        ,  XXXXXXX
@@ -127,11 +127,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       TO(_BASE)       ,  TO(_BASE)       ,  TO(_BASE)       ,  TO(_BASE)
   ),
   [_OSL_SYM] = LAYOUT_voyager(
-    //-------------  , --------------  , --------------       , --------------        , --------------  , ---------SPLIT  , SPLIT---------  , --------------  , --------------        , --------------       , --------------  , --------------  ,
-    _______          , KC_EXCLAIM      , KC_AT                , KC_HASH               , KC_DOLLAR       , KC_PERCENT      , KC_EXCLAIM      , KC_AT           , KC_HASH               , KC_DOLLAR            , KC_PERCENT      , KC_PERCENT      ,
-    _______          , KC_CIRCUMFLEX   , KC_AMPERSAND         , KC_ASTERISK           , KC_LEFT_PAREN   , KC_RIGHT_PAREN  , KC_CIRCUMFLEX   , KC_AMPERSAND    , KC_ASTERISK           , KC_LEFT_PAREN        , KC_RIGHT_PAREN  , KC_RIGHT_PAREN  ,
-    _______          , KC_BACKSLASH    , KC_LEFT_BRACKET      , KC_RIGHT_BRACKET      , KC_MINUS        , KC_SLASH        , KC_SLASH        , KC_MINUS        , KC_RIGHT_BRACKET      , KC_LEFT_BRACKET      , KC_BACKSLASH    , _______         ,
-    _______          , KC_SEMICOLON    , KC_LEFT_CURLY_BRACE  , KC_RIGHT_CURLY_BRACE  , KC_EQUAL        , KC_DOT          , KC_DOT          , KC_EQUAL        , KC_RIGHT_CURLY_BRACE  , KC_LEFT_CURLY_BRACE  , KC_SEMICOLON    , _______         ,
+    //-------------  , --------------  , --------------       , --------------        , --------------  , ---------SPLIT  , SPLIT---------  , --------------  , --------------       , --------------        , --------------  , --------------  ,
+     _______         , _______         , _______              , _______               , _______         , _______         , _______         , _______         , _______              , _______               , _______         , _______         ,
+     _______         , _______         , KC_LEFT_CURLY_BRACE  , KC_RIGHT_CURLY_BRACE  , KC_PLUS         , KC_CIRCUMFLEX   , KC_CIRCUMFLEX   , KC_PLUS         , KC_LEFT_CURLY_BRACE  , KC_RIGHT_CURLY_BRACE  , _______         , _______         ,
+     _______         , KC_EXCLAIM      , KC_LEFT_PAREN        , KC_RIGHT_PAREN        , KC_MINUS        , KC_TILDE        , KC_TILDE        , KC_MINUS        , KC_LEFT_PAREN        , KC_RIGHT_PAREN        , KC_EXCLAIM      , _______         ,
+     _______         , KC_QUESTION     , KC_LEFT_BRACKET      , KC_RIGHT_BRACKET      , KC_EQUAL        , KC_UNDERSCORE   , KC_UNDERSCORE   , KC_EQUAL        , KC_LEFT_BRACKET      , KC_RIGHT_BRACKET      , KC_QUESTION     , _______         ,
     // Thumb cluster
     //--------------  ,  ---------SPLIT  ,  SPLIT---------  ,  --------------
       TO(_BASE)       ,  TO(_BASE)       ,  TO(_BASE)       ,  TO(_BASE)
